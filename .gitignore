@@ -1,0 +1,6 @@
+.stack-work/
+*~
+dist-newstyle
+dist-newstyle-build-no-code
+*.debug
+.debug*
