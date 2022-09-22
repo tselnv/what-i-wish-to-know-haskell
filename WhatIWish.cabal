@@ -25,10 +25,16 @@ source-repository head
 library
   exposed-modules:
       Basics.Bottoms
+      Basics.DeferredTypeErrors
       Basics.Exhaustiveness
+      Basics.Haddok
       Basics.Stacktraces
       Basics.Trace
+      Basics.TypeHoles
+      Generics.Biplate
+      Generics.Uniplate
       Lib
+      Other.Uniplate
   other-modules:
       Paths_WhatIWish
   hs-source-dirs:
@@ -39,6 +45,8 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , mtl
+    , uniplate
   default-language: Haskell2010
 
 executable WhatIWish-exe
@@ -54,6 +62,8 @@ executable WhatIWish-exe
   build-depends:
       WhatIWish
     , base >=4.7 && <5
+    , mtl
+    , uniplate
   default-language: Haskell2010
 
 test-suite WhatIWish-test
@@ -70,4 +80,6 @@ test-suite WhatIWish-test
   build-depends:
       WhatIWish
     , base >=4.7 && <5
+    , mtl
+    , uniplate
   default-language: Haskell2010
